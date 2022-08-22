@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const FilterObject = () => {
-    const [unFilteredArr, setUnFilteredArr] = useState([{ "name": "Jimmy Joe", "title": "Hack0r", "age": 12 }, { "name": "Jeremy Schrader", "age": 24, "hairColor": "brown" }, { "name": "Carly Armstrong", "title": "CEO" }]);
+    const [unFilteredArr, setUnFilteredArr] = useState([{ "name": "Jimmy Joe", "title": "Hack0r", "age": 12 }, { "name": "Jeremy Schroeder", "age": 24, "hairColor": "brown" }, { "name": "Carly Armstrong", "title": "CEO" }]);
     const [userInput, setUserInput] = useState('');
     const [filteredArr, setFilteredArr] = useState([]);
 
@@ -10,7 +10,7 @@ const FilterObject = () => {
     };
 
     const buttonHandler = () => {
-        let resultArr = [];
+        const resultArr = [];
         unFilteredArr.filter(word => {
             word.hasOwnProperty(userInput) && resultArr.push(word)
         });
